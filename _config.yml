@@ -1,0 +1,2 @@
+# Set this to `false` to set your own theme
+pandoc_markdown_syntax_theme: 'solarized'

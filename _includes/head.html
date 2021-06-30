@@ -1,0 +1,33 @@
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc-markdown-css-theme" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="{{ site.author }}">
+  {% if page.date %}
+  <meta name="dcterms.date" content="{{ page.date }}">
+  {% endif %}
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords | join: ' ' }}">
+  {% endif %}
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
+  <title>{{ page.title }} – {{ site.title }}</title>
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+  {% if pandoc_markdown_syntax_theme == 'solarized' %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/skylighting-solarized-theme.css">
+  {% endif %}
+
+  {% include math.html %}
+
+  {% if site.header_includes %}
+    {% for header_include in site.header_includes %}
+      {{ header_include }}
+    {% endfor %}
+  {% endif %}
+
+  {% if page.header_includes %}
+    {% for header_include in page.header_includes %}
+      {{ header_include }}
+    {% endfor %}
+  {% endif %}

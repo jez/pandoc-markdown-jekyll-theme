@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ page.lang | default: 'en'}}" xml:lang="{{ page.lang | default: 'en'}}" dir="{{ page.dir | default: 'ltr'}}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include before.html %}
+  {% include header.html %}
+
+  {{ content }}
+
+  {% if page.layout != 'index' -%}
+    <footer>
+      <p class="signoff"><a href="{{ site.baseurl }}/">← Return home</a></p>
+    </footer>>
+  {% endif -%}
+
+  {% include enable_checkboxes.html %}
+  {% include after.html %}
+</body>
+</html>
