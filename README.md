@@ -51,7 +51,7 @@ pandoc:
   extensions:
     - from: 'markdown+smart+tex_math_single_backslash'
     - filter: 'pandoc-sidenote'
-    - template: '_site/assets/templates/template.html5'
+    - template: '_template'
     - katex
     - toc
 ```

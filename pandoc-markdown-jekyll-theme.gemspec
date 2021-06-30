@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/jez/pandoc-markdown-jekyll-theme"
   spec.license       = "BlueOak-1.0.0"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README)}i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|LICENSE|README|_template.html5)}i) }
 
   spec.add_runtime_dependency "jekyll-pandoc", "~> 2.0"
 
