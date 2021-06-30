@@ -32,7 +32,10 @@ gem "pandoc-markdown-jekyll-theme"
 And then run:
 
 ```bash
+# Install the Jekyll theme
 bundle install
+# Copy out one file that has to live in the site folder, not the theme
+cp $(bundle info pandoc-markdown-jekyll-theme --path)/_template.html5 .
 ```
 
 And finally, update your `_config.yml` file:

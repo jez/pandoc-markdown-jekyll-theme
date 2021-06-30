@@ -848,7 +848,8 @@ nav#TOC > input:checked + ul {
   }
 
   header,
-  main {
+  main,
+  footer {
     margin-left: auto;
     margin-right: auto;
   }
