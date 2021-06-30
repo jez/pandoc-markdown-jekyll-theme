@@ -57,7 +57,14 @@ pandoc:
     - template: '_template'
     - katex
     - toc
+    - M: 'site__baseurl=/'
 ```
+
+If your Jekyll site has a `baseurl:` setting in `_config.yml`, change the last
+line above to `site__baseurl=$BASEURL/`, replacing `$BASEURL` with what the
+setting of your `baseurl` property reads. (There is unfortunately no easy way to
+get the Pandoc template file to read from the Jekyll config, so the value must
+be duplicated.)
 
 ## Usage
 
