@@ -1,33 +1,37 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc-markdown-css-theme" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="{{ site.author or page.author }}">
-  {% if page.date %}
+{% if page.author -%}
+  <meta name="author" content="{{ page.author }}">
+{% elsif site.author -%}
+  <meta name="author" content="{{ site.author }}">
+{% endif -%}
+{% if page.date -%}
   <meta name="dcterms.date" content="{{ page.date }}">
-  {% endif %}
-  {% if page.keywords %}
+{% endif -%}
+{% if page.keywords -%}
   <meta name="keywords" content="{{ page.keywords | join: ' ' }}">
-  {% endif %}
-  {% if page.description %}
+{% endif -%}
+{% if page.description -%}
   <meta name="description" content="{{ page.description }}">
-  {% endif %}
+{% endif -%}
   <title>{{ page.title }} – {{ site.title }}</title>
 
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
-  {% if site.pandoc_markdown_syntax_theme == 'solarized' %}
+{% if site.pandoc_markdown_syntax_theme == 'solarized' -%}
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/skylighting-solarized-theme.css">
-  {% endif %}
+{% endif -%}
 
-  {% include math.html %}
+{% include math.html %}
 
-  {% if site.header_includes %}
-    {% for header_include in site.header_includes %}
-      {{ header_include }}
-    {% endfor %}
-  {% endif %}
+{% if site.header_includes %}
+  {% for header_include in site.header_includes %}
+    {{ header_include }}
+  {% endfor %}
+{% endif %}
 
-  {% if page.header_includes %}
-    {% for header_include in page.header_includes %}
-      {{ header_include }}
-    {% endfor %}
-  {% endif %}
+{% if page.header_includes %}
+  {% for header_include in page.header_includes %}
+    {{ header_include }}
+  {% endfor %}
+{% endif %}
