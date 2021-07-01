@@ -71,14 +71,18 @@ be duplicated.)
 The following variables are used by this theme.
 
 - `site.title`
+  - Only shows up as suffix in `<title>` element
+- `page.title`
 - `site.author`
-  - Note that this theme currently only supports one author.
+- `page.author`
 - `site.baseurl`
   - Make sure you don't have a trailing slash here
 - `site.header_includes`
 - `page.header_includes`
   - You can use these to include raw HTML in the `<head>`
 - `site.include_after`
+- `site.pandoc_markdown_syntax_theme`
+  - Defaults to `'solarized'`. Set to `false` to provide your own theme.
 - `page.include_after`
   - You can use these to include raw HTML in the `<body>` before the content
 - `site.include_before`
@@ -87,14 +91,25 @@ The following variables are used by this theme.
 - `page.layout`
   - Pick one of `index`, `page`, or `post`
   - `index` won't have a "Return home" link at the bottom of the page
-- `page.title`
 - `page.subtitle`
+  - Shows up in the page.
+- `page.description`
+  - Only shows up in the `<head>` section, as a `<meta>` tag.
 - `page.date`
 - `page.keywords`
 - `page.math`
-  - If `true`, we'll include KaTeX for displaying math formulas
-- `pandoc_markdown_syntax_theme`
-  - Defaults to `'solarized'`. Set to `false` to provide your own theme.
+  - If `true`, we'll include KaTeX for displaying math formulas. Will add
+    JavaScript on this page.
+- `page.lang`
+  - Sets the HTML lang attribute. Default: `'en'`
+- `page.dir`
+  - Sets the HTML dir attribute. Default: `'ltr'`
+
+You can also define:
+
+- `_includes/enable_checkboxes.html`
+
+to be an empty file in your project to remove the only non-math JavaScript.
 
 ## Developing
 

@@ -15,7 +15,7 @@
 {% if page.description -%}
   <meta name="description" content="{{ page.description }}">
 {% endif -%}
-  <title>{{ page.title }} – {{ site.title }}</title>
+  <title>{{ page.title }}{% if site.title %} – {{ site.title }}{% endif %}</title>
 
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
 {% if site.pandoc_markdown_syntax_theme == 'solarized' -%}
