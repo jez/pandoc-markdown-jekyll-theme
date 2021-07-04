@@ -81,8 +81,8 @@ The following variables are used by this theme.
 - `page.header_includes`
   - You can use these to include raw HTML in the `<head>`
 - `site.include_after`
-- `site.pandoc_markdown_syntax_theme`
-  - Defaults to `'solarized'`. Set to `false` to provide your own theme.
+- `site.pandoc_markdown_skip_syntax_theme`
+  - Set to `true` to skip including the default syntax theme CSS file.
 - `page.include_after`
   - You can use these to include raw HTML in the `<body>` before the content
 - `site.include_before`

@@ -18,7 +18,7 @@
   <title>{{ page.title }}{% if site.title %} – {{ site.title }}{% endif %}</title>
 
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
-{% if site.pandoc_markdown_syntax_theme == 'solarized' -%}
+{% unless site.pandoc_markdown_skip_syntax_theme -%}
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/skylighting-solarized-theme.css">
 {% endif -%}
 
