@@ -14,6 +14,8 @@
 {% endif -%}
 {% if page.description -%}
   <meta name="description" content="{{ page.description }}">
+{% elsif site.description -%}
+  <meta name="description" content="{{ site.description }}">
 {% endif -%}
   <title>{{ page.title }}{% if site.title %} – {{ site.title }}{% endif %}</title>
 

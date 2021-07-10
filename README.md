@@ -96,6 +96,7 @@ The following variables are used by this theme.
   - `index` won't have a "Return home" link at the bottom of the page
 - `page.subtitle`
   - Shows up in the page.
+- `site.description`
 - `page.description`
   - Only shows up in the `<head>` section, as a `<meta>` tag.
 - `page.date`
