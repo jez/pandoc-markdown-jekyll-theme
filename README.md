@@ -36,6 +36,8 @@ And then run:
 bundle install
 # Copy out one file that has to live in the site folder, not the theme
 cp $(bundle info pandoc-markdown-jekyll-theme --path)/_template.html5 .
+# Bust the Jekyll cache (Jekyll doesn't track _template.html5 changes)
+rm -rf .jekyll-cache
 ```
 
 And finally, update your `_config.yml` file:
@@ -75,6 +77,7 @@ The following variables are used by this theme.
 - `page.title`
 - `site.author`
 - `page.author`
+- `page.author_url`
 - `site.baseurl`
   - Make sure you don't have a trailing slash here
 - `site.header_includes`
