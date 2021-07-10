@@ -531,7 +531,9 @@ pre.tight-code {
 }
 
 pre.tight-code code,
-.tight-code pre code {
+.tight-code pre code,
+.tight-code pre > code.sourceCode > span,
+pre.tight-code > code.sourceCode > span {
   line-height: var(--tight-code-line-height);
 }
 
