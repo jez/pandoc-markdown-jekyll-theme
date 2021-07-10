@@ -120,7 +120,7 @@ To make a release:
 
 ```bash
 vim pandoc-markdown-jekyll-theme.gemspec
-git commit pandoc-markdown-jekyll-theme.gemspec -m 'Bump version'
+git commit pandoc-markdown-jekyll-theme.gemspec -m "$version"
 git tag "$version"
 git push --tags origin master
 gem build pandoc-markdown-jekyll-theme.gemspec
