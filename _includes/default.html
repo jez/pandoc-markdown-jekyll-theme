@@ -9,12 +9,7 @@
 
   {{ content }}
 
-  {% if page.layout != 'index' -%}
-    <footer>
-      <p class="signoff"><a href="{{ site.baseurl }}/">← Return home</a></p>
-    </footer>
-  {% endif -%}
-
+  {% include footer.html %}
   {% include enable_checkboxes.html %}
   {% include after.html %}
 </body>
