@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "pandoc-markdown-jekyll-theme"
-  spec.version       = "0.12.0"
+  spec.version       = "0.12.1"
   spec.authors       = ["Jake Zimmerman"]
   spec.email         = ["zimmerman.jake@gmail.com"]
 
