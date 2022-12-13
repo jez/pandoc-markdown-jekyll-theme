@@ -120,14 +120,17 @@ to be an empty file in your project to remove the only non-math JavaScript.
 To update KaTeX:
 
 ```bash
-version=0.11.1
-wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$version/katex.min.js -O assets/js/katex-$version.min.js
-wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$version/katex.min.css -O assets/css/katex-$version.min.css
+katex_version=0.11.1
+wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$katex_version/katex.min.js \
+  -O assets/js/katex-$katex_version.min.js
+wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$katex_version/katex.min.css \
+  -O assets/css/katex-$katex_version.min.css
 ```
 
 To make a release:
 
 ```bash
+version=TODO
 vim pandoc-markdown-jekyll-theme.gemspec
 git commit pandoc-markdown-jekyll-theme.gemspec -m "$version"
 git tag "$version"
