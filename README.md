@@ -121,10 +121,17 @@ To update KaTeX:
 
 ```bash
 katex_version=0.11.1
-wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$katex_version/katex.min.js \
-  -O assets/js/katex-$katex_version.min.js
-wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$katex_version/katex.min.css \
-  -O assets/css/katex-$katex_version.min.css
+mkdir assets/libs/KaTeX/$katex_version/
+cd assets/libs/KaTeX/$katex_version/
+wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$katex_version/katex.min.js
+wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$katex_version/katex.min.css
+rg --no-heading --no-filename --no-line-number --only-matching 'url\(font[^)]+\)' | \
+  cut -c 5- | \
+  sed -e 's/)$//' | \
+  sed -e "s+^+https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$katex_version/+" | \
+  xargs wget -i -
+mkdir -p fonts
+mv *.ttf *.woff *.woff2 fonts
 ```
 
 To make a release:
