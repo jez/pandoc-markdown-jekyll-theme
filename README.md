@@ -117,6 +117,14 @@ to be an empty file in your project to remove the only non-math JavaScript.
 
 ## Developing
 
+To update KaTeX:
+
+```bash
+version=0.11.1
+wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$version/katex.min.js -O assets/js/katex-$version.min.js
+wget https://cdnjs.cloudflare.com/ajax/libs/KaTeX/$version/katex.min.css -O assets/css/katex-$version.min.css
+```
+
 To make a release:
 
 ```bash
