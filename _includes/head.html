@@ -6,7 +6,12 @@
 {% elsif site.author -%}
   <meta name="author" content="{{ site.author }}">
 {% endif -%}
-{% if page.date -%}
+{% comment %}
+Jekyll assigns a date to all pages (not just posts). For pages/collections/etc. that
+don't have a date in the filename or a date in the front matter, it defaults to
+site.time (a time representing when the jekyll build command was issued).
+{% endcomment %}
+{% if page.date != site.time -%}
   <meta name="dcterms.date" content="{{ page.date }}">
 {% endif -%}
 {% if page.keywords -%}
