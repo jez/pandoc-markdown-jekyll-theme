@@ -17,7 +17,10 @@ installation is as easy as:
 
 ```bash
 brew install pandoc
-brew install jez/formulae/pandoc-sidenote
+
+curl --remote-name --no-clobber --create-dirs \
+  --output-dir "${XDG_DATA_DIR:-$HOME/.local/share/}/pandoc/filters" \
+  -sSL "https://github.com/jez/pandoc-sidenote/raw/refs/heads/master/pandoc-sidenote.lua"
 ```
 
 Next, add this line to your Jekyll site's Gemfile:
@@ -55,7 +58,7 @@ markdown: Pandoc
 pandoc:
   extensions:
     - from: 'markdown+smart+tex_math_single_backslash'
-    - filter: 'pandoc-sidenote'
+    - lua-filter: 'pandoc-sidenote.lua'
     - template: '_template'
     - katex
     - toc
