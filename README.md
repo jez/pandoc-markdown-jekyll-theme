@@ -112,9 +112,10 @@ The following variables are used by this theme.
 - `page.dir`
   - Sets the HTML dir attribute. Default: `'ltr'`
 
-You can also define:
+You can also define either of:
 
 - `_includes/enable_checkboxes.html`
+- `_includes/block_based_side_notes.html`
 
 to be an empty file in your project to remove the only non-math JavaScript.
 
