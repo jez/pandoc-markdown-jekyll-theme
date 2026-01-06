@@ -141,11 +141,14 @@ mv *.ttf *.woff *.woff2 fonts
 To make a release:
 
 ```bash
-version=TODO
+export version=TODO
+
 vim pandoc-markdown-jekyll-theme.gemspec
-git commit pandoc-markdown-jekyll-theme.gemspec -m "$version"
-git tag "$version"
-git push --tags origin master
-gem build pandoc-markdown-jekyll-theme.gemspec
+
+ git commit pandoc-markdown-jekyll-theme.gemspec -m "$version" &&
+    git tag "$version" &&
+    git push --tags origin master &&
+    gem build pandoc-markdown-jekyll-theme.gemspec
+
 gem push "pandoc-markdown-jekyll-theme-$version.gem"
 ```
